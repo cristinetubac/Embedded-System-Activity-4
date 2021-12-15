@@ -16,7 +16,7 @@
 	for ( i = 0 ; i < keylen-1 ; i++) {
 		input [ msglen + i ] ='0';
 	}
-	for ( i = 0 ; i < keylen ; i++)
+	for ( i = 0 ; i < keylen ; i++)   /* loop in getting the quotient */
 	 temp [ i ] = input [ i ];
 	for ( i = 0; i < msglen; i++) {
 		quot [ i ] = temp [ 0 ];
@@ -30,9 +30,9 @@
 			 rem[ j-1 ] = '0'; else
 			 rem[ j-1 ] = '1';
 		}
-		rem[ keylen-1 ] = input[ i + keylen];
+		rem[ keylen-1 ] = input[ i + keylen];     /* getting the remainder */
 		strcpy( temp, rem);
-	}
+	}       /* Print all the necessary guidelines */
 	strcpy( rem, temp);
 	printf("\nQuotient is ");
 	for ( i = 0; i < msglen; i++)
