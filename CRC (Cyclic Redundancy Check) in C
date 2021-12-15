@@ -32,7 +32,7 @@
 		}
 		rem[ keylen-1 ] = input[ i + keylen];     /* getting the remainder */
 		strcpy( temp, rem);
-	}       /* Print all the necessary guidelines */
+	}       /* Call the output and print */
 	strcpy( rem, temp);
 	printf("\nQuotient is ");
 	for ( i = 0; i < msglen; i++)
