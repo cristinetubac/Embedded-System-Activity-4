@@ -1,0 +1,35 @@
+/* Running Checksum in C program */
+#include<stdio.h>
+#include<conio.h>
+#include<math.h>
+ 
+ int sender ( int b[10], int k)   /* size of string and elements of array */
+ {
+ 	int checksum, sum=0, i;
+        	printf("\n****SENDER****\n"); 
+     
+for ( i = 0; i < k; i ++)           /* loop to find Sum */
+      		sum += b [ i ];
+      		printf("SUM IS: %d",sum);
+                     
+    	checksum =~ sum;
+    	printf("\nSENDER's CHECKSUM IS: %d",checksum);
+    	return checksum;
+}
+ 
+int receiver(int c[10], int k, int scheck)
+{
+int checksum, sum = 0, i; 
+     	printf("\n\n****RECEIVER****\n");
+     	for ( i = 0; i < k; i++)   /* loop for receiver */
+      		sum += c [ i ];
+      	printf(" RECEIVER SUM IS: %d",sum);
+      	sum = sum + scheck;
+      	checksum =~ sum;
+      	printf("\nRECEIVER's CHECKSUM IS: %d",checksum);
+      		return checksum;
+  }
+   main()
+   {
+     	int a[10], i, m, scheck, rcheck;
+clrscr();              
